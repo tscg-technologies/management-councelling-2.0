@@ -1,0 +1,250 @@
+/* ==========================================================================
+   MANAGEMENT CONSULTING COMPANY - RESPONSIVE STYLESHEET
+   Breakpoints: 1440px, 1200px, 1024px, 768px, 576px, 390px, 360px
+   ========================================================================== */
+
+/* Large Desktop (1440px and up) */
+@media (min-width: 1440px) {
+  .hero-title {
+    font-size: 3.25rem;
+  }
+}
+
+/* Standard Desktop to Laptop (Max 1200px) */
+@media (max-width: 1200px) {
+  .mega-menu {
+    width: 860px;
+    left: -150px;
+    grid-template-columns: repeat(3, 1fr) 180px;
+    gap: 1.25rem;
+  }
+
+  .methodology-stages {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .roadmap-flow {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Laptop / Medium Viewport (Max 1024px) */
+@media (max-width: 1024px) {
+  h1 { font-size: 2.35rem; }
+  h2 { font-size: 1.95rem; }
+  h3 { font-size: 1.35rem; }
+
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .card-grid-3, .card-grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+
+  .metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Tablet (Max 768px) */
+@media (max-width: 768px) {
+  .top-bar-contact {
+    display: none;
+  }
+
+  .mobile-menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Mobile Navigation Drawer */
+  .main-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 85%;
+    max-width: 380px;
+    height: 100vh;
+    background: #FFFFFF;
+    box-shadow: -8px 0 24px rgba(0, 0, 0, 0.15);
+    padding: 5rem 1.5rem 2rem;
+    overflow-y: auto;
+    transition: right 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 1040;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main-nav.is-open {
+    right: 0;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    gap: 0.5rem;
+  }
+
+  .nav-link {
+    width: 100%;
+    justify-content: space-between;
+    padding: 0.85rem 1rem;
+    font-size: 1.05rem;
+    border-radius: var(--radius-sm);
+  }
+
+  .mega-menu, .dropdown-menu {
+    position: static;
+    width: 100%;
+    box-shadow: none;
+    border: 1px solid var(--border-light);
+    transform: none !important;
+    display: none;
+    padding: 0.75rem;
+    margin-top: 0.5rem;
+  }
+
+  .mega-menu {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-item.is-expanded .mega-menu,
+  .nav-item.is-expanded .dropdown-menu {
+    display: flex;
+    flex-direction: column;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .card-grid-2, .card-grid-3, .card-grid-4 {
+    grid-template-columns: 1fr;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .methodology-stages {
+    grid-template-columns: 1fr;
+  }
+
+  .roadmap-flow {
+    grid-template-columns: 1fr;
+  }
+
+  .workflow-compare {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+  }
+
+  .hero-meta {
+    grid-template-columns: 1fr;
+  }
+
+  .wizard-content {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .wizard-progress {
+    padding: 1.25rem 1rem;
+    overflow-x: auto;
+  }
+
+  .wizard-steps-indicator {
+    min-width: 500px;
+  }
+}
+
+/* Mobile Small (390px / 360px) */
+@media (max-width: 480px) {
+  html {
+    font-size: 15px;
+  }
+
+  .hero {
+    padding: 3rem 0 3.5rem;
+  }
+
+  .hero-title {
+    font-size: 2.15rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .section {
+    padding: 3.5rem 0;
+  }
+
+  .metrics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 1.35rem;
+  }
+
+  .service-card-body, .case-card-body, .industry-card-body {
+    padding: 1.25rem;
+  }
+
+  .brand-text-primary {
+    font-size: 0.875rem;
+  }
+
+  .header-actions .btn {
+    display: none;
+  }
+
+  .toast-notice {
+    left: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+  }
+}
+
+/* Extra small devices (360px safety) */
+@media (max-width: 360px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .hero-title {
+    font-size: 1.95rem;
+  }
+
+  .node-title {
+    font-size: 0.65rem;
+  }
+}

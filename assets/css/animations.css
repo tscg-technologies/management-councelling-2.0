@@ -1,0 +1,45 @@
+/* ==========================================================================
+   MANAGEMENT CONSULTING COMPANY - ANIMATIONS
+   Restrained Executive Transitions & Reduced Motion Support
+   ========================================================================== */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulseGently {
+  0% {
+    box-shadow: 0 0 0 0 rgba(71, 123, 183, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 8px rgba(71, 123, 183, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(71, 123, 183, 0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.4s ease forwards;
+}
+
+.animate-pulse {
+  animation: pulseGently 2s infinite;
+}
+
+/* Reduced Motion Preference (Strict Accessibility Rule #8 & #12) */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
